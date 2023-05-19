@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import{Routes,Route,Link}from "react-router-dom";
-// import styles from"./App.module.css";
+import{Routes,Route}from "react-router-dom";
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
+import Layout from './components/layouts/Layout';
+
 
 // import'./style.css';
 
@@ -42,43 +43,22 @@ export const SecondApp=()=>{
 // export const ContactPage = () => {
 //   return <h1>This is a Contact Page</h1>;
 // };
- const App=()=>{
-return(
-    <>
-      <nav className="navbar">
-        <div className='navbrand'>Brand</div>
-        <ul className="navlist">
-        <li className='navlink'>
-          <Link 
-          to='/'
-          >
-          Home
-          </Link>
-          </li>
-        <li className='navlink'>
-        <Link 
-          to='/about'
-          >
-          AboutUs
-          </Link>
-          </li>
-        <li className='navlink'>
-        <Link 
-          to='/contact'
-          >
-          Contact
-          </Link>
-          </li>
-       </ul>
-      </nav>
+ 
 
-      
+const App=()=>{
+  return(
+  <>
+
       <Routes>
-       <Route index element={<Home/>} />
+        <Route path="/" element={<Layout/>}>
+        <Route index element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
+   </Route>
       </Routes>
+  
     </>
-)
-};
+     );
+    };
+
 export default App;

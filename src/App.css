@@ -1,22 +1,100 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .navbar{
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 .navbrand{
-  font-size: 20px;
+  font-size: 40px;
   color:aqua;
+  font-weight: 600;
 }
+
 ul.navlist{
   display:flex;
-  gap:10px;
+  gap:20px;
   list-style: none;
   font-weight: 600;
 }
-li.navlink:hover{
+a{
+  text-decoration: none;
+  font-size:20px;
+}
+a:hover{
   color:blueviolet;
 }
+.main-section{
+  display: flex;
+  gap:70px;
+  margin:20px;
+}
+.heading1{
+  margin-bottom: 10px;
+}
+.content{
+  width: 600px;
+}
+.image{
+  height:400px;
+  width: 600;
+}
+
+.aboutus-section{
+  display: flex;
+}
+
+.footer{
+  background-color: darkgrey;
+  padding: 20px;
+  text-align: center;
+  border-radius:10px;
+}
+.icon{
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  
+}
+.icon:hover{
+color:aliceblue;
+}
+.button{
+  background-color: rgb(221, 236, 248);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px;
+  
+}
+.button.primary{
+  background-color: antiquewhite;
+  width:90%;
+}
+.button.danger{
+  background-color: aquamarine;
+  color: #ffff;
+}
+
+.card-container{
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px #c4c1c1;
+  margin: 10px;
+ 
+}
+
+.image1{
+width: 350px;
+height: 250px;
+}
+.card-title,.card-description{
+  padding: 10px;
+}
+.card-pages{
+  display: flex;
+  gap: 50px;
+}
+
